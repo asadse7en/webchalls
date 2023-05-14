@@ -1,1 +1,1 @@
-web: gunicorn fypCTF.wsgi --log-file -
+web: gunicorn webchalls.wsgi --log-file -
