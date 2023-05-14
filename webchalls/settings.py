@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-#&b^mg(%+3_t#pt^z+jir%(a^a=-8_cmz060!39w4(@nt#v^f6'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1', 'webchalls.herokuapp.com']
 
@@ -60,10 +60,13 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'webchalls.urls'
 
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            (os.path.join(BASE_DIR, 'templates'))
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
