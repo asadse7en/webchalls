@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Random</title>
+        <style>
+            p {
+                text-align: center;
+                font-size: 7em;
+                color: rgba(247, 255, 183, 0.26);
+            }
+            span {
+                font-size: 3em;
+            }
+            .word {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+            }
+            .letter {
+                font-size: 24px;
+                font-weight: bold;
+                color: #6f5fff7e;
+                text-shadow: 1px 1px 1px #000;
+                position: relative;
+                margin: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <p>Search for the Flag</p>
+        <p>In the Source Code</p>
+        <div class="box">
+            <div class="word">
+                <span id="letter1">a</span>
+                <span id="letter2">u</span>
+                <span id="letter3">p</span>
+                <span id="letter4">C</span>
+                <span id="letter5">T</span>
+                <span id="letter6">F</span>
+                <span id="letter7">{</span>
+            </div>
+            <div class="word">
+                <span id="letter8">w</span>
+                <span id="letter9">4</span>
+                <span id="letter10">5</span>
+                <span id="letter11">n</span>
+                <span id="letter12">'</span>
+                <span id="letter13">t</span>
+                <span id="letter14">-</span>
+                <span id="letter15">t</span>
+                <span id="letter16">h</span>
+                <span id="letter17">4</span>
+                <span id="letter18">7</span>
+                <span id="letter19">-</span>
+                <span id="letter20">h</span>
+                <span id="letter21">4</span>
+                <span id="letter22">r</span>
+                <span id="letter23">d</span>
+                <span id="letter24">-</span>
+                <span id="letter25">r</span>
+                <span id="letter26">1</span>
+                <span id="letter27">g</span>
+                <span id="letter28">h</span>
+                <span id="letter29">7</span>
+            </div>
+            <div class="word">
+                <span id="letter30">}</span>
+            </div>
+        </div>
+        
+        <script>
+            // Position each letter randomly on the screen
+            var letters = document.querySelectorAll('.box .word span');
+            for (var i = 0; i < letters.length; i++) {
+                var letter = letters[i];
+                letter.style.position = 'absolute';
+                letter.style.top = Math.floor(Math.random() * (window.innerHeight - letter.offsetHeight)) + "px";
+                letter.style.left = Math.floor(Math.random() * (window.innerWidth - letter.offsetWidth)) + "px";
+            }
+        </script>
+    </body>
+</html>    

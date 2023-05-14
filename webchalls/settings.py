@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'header_easy',
     'dir',
     'home',
+    'starter',
 ]
 
 MIDDLEWARE = [

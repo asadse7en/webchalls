@@ -23,6 +23,7 @@ urlpatterns = [
     path('sqli-2/', include('sqli_medium.urls')),
     path('header/', include('header_easy.urls')),
     path('dir/', include('dir.urls')),
+    path('starter/', include('starter.urls')),
     path('', include('home.urls')),
 
 ]
