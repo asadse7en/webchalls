@@ -1,0 +1,26 @@
+<style>
+    pre {
+        background-color: #dfdddd;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 14px;
+        font-family: monospace;
+        padding: 10px;
+        white-space: pre-wrap;
+        width: 400px;
+    }
+
+</style>
+
+<br>
+<pre>
+def headar_easy(request):
+    if request.META.get('HTTP_GETFLAG') == 'yes':
+        context = {
+            'flag': '[REDACTED]',
+        }
+        
+        return render(request, 'aa/flag.html', context)
+    
+    return render(request, 'aa/index.html')
+</pre>

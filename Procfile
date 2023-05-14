@@ -1,0 +1,1 @@
+web: gunicorn fypCTF.wsgi --log-file -
