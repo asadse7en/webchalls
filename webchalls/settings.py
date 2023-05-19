@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'dir',
     'home',
     'starter',
+    'champ',
 ]
 
 MIDDLEWARE = [

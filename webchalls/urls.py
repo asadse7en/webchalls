@@ -24,6 +24,7 @@ urlpatterns = [
     path('header/', include('header_easy.urls')),
     path('dir/', include('dir.urls')),
     path('starter/', include('starter.urls')),
+    path('champ/', include('champ.urls')),
     path('', include('home.urls')),
 
 ]
