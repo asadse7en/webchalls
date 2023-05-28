@@ -16,6 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.views.generic.base import RedirectView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -24,7 +25,7 @@ urlpatterns = [
     path('header/', include('header_easy.urls')),
     path('dir/', include('dir.urls')),
     path('starter/', include('starter.urls')),
-    path('champ/', include('champ.urls')),
     path('', include('home.urls')),
+    path('traveler/', RedirectView.as_view(url='https://iasad.me/tags/')),
 
 ]
