@@ -11,9 +11,9 @@ def login_view(request):
         # Check if username and password are correct
         if username == 'asad' and password == 'asad':
             if admin == 'true':
-                return render(request, 'success.html', {'message': 'Congratulations! You have logged in as admin. Here is your flag: FLAG{...}'})
+                return render(request, 'flag.html')
             else:
-                return render(request, 'success.html', {'message': 'Login successful! Login as Admin to get the flag'})
+                return render(request, 'success.html')
         else:
             return render(request, 'login.html', {'error': 'Invalid credentials. Please try again.'})
 
