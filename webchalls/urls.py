@@ -25,6 +25,7 @@ urlpatterns = [
     path('header/', include('header_easy.urls')),
     path('dir/', include('dir.urls')),
     path('starter/', include('starter.urls')),
+    path('conundrum/', include('conundrum.urls')),
     path('', include('home.urls')),
     path('traveler/', RedirectView.as_view(url='https://iasad.me/tags/')),
 
