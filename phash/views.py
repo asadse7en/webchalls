@@ -7,7 +7,7 @@ from django.views.decorators.csrf import csrf_exempt
 @csrf_exempt
 def login(request):
 
-    random_word = 'bigbrother'
+    random_word = 'ghostrider'
     random_md5 = hashlib.md5(random_word.encode('utf-8')).hexdigest()
 
     if request.method == 'POST':
