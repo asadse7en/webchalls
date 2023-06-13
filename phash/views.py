@@ -12,7 +12,7 @@ def login(request):
         password = request.POST.get('password')
 
         if username == 'admin' and password == random_md5:
-            messages.success(request, 'Congratulations! here is your flag [REDACATED]')
+            messages.success(request, 'Congratulations! here is your flag: aupCTF{y0u-ar3-a-ha5hcr4ck1ng-m4ch1n3}')
         else:
             messages.error(request, 'Invalid username or password.')
 
