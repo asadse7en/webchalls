@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'starter',
     'traveler',
     'conundrum',
+    'phash',
 ]
 
 MIDDLEWARE = [

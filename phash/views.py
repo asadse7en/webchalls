@@ -1,0 +1,20 @@
+from django.shortcuts import render, redirect
+from django.contrib import messages
+import hashlib
+
+def login(request):
+
+    random_word = 'bigbrother'
+    random_md5 = hashlib.md5(random_word.encode('utf-8')).hexdigest()
+
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+
+        if username == 'admin' and password == random_md5:
+            messages.success(request, 'Congratulations! here is your flag [REDACATED]')
+        else:
+            messages.error(request, 'Invalid username or password.')
+
+
+    return render(request, 'phash.html')
