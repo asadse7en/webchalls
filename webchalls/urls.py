@@ -29,6 +29,6 @@ urlpatterns = [
     path('conundrum/', include('conundrum.urls')),
     path('phash/', include('phash.urls')),
     path('', include('home.urls')),
-    path('traveler/', RedirectView.as_view(url='https://iasad.me/tags/')),
+    path('traveler/', RedirectView.as_view(url='https://iasad.me/')),
 
 ]
